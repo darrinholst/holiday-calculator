@@ -32,13 +32,11 @@
     "chai": "^4.0.2",
     "mocha": "^3.4.2",
     "moment": "^2.18.1",
+    "release-it": "^2.8.0",
     "rimraf": "^2.6.1",
     "typescript": "^2.4.1"
   },
   "peerDependencies": {
     "moment": "^2.18.1"
-  },
-  "dependencies": {
-    "release-it": "^2.8.0"
   }
 }
