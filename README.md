@@ -1,5 +1,11 @@
 # moment-holiday
 
+[![npm-version](https://img.shields.io/npm/v/moment-holiday.svg)](https://www.npmjs.com/package/moment-holiday)
+[![Build Status](https://travis-ci.org/darrinholst/moment-holiday.svg?branch=master)](https://travis-ci.org/darrinholst/moment-holiday)
+[![dependencies](https://david-dm.org/darrinholst/moment-holiday/status.svg)](https://david-dm.org/darrinholst/moment-holiday)
+[![dev dependencies](https://david-dm.org/darrinholst/moment-holiday/dev-status.svg)](https://david-dm.org/darrinholst/moment-holiday?type=dev)
+[![peer dependencies](https://david-dm.org/darrinholst/moment-holiday/peer-status.svg)](https://david-dm.org/darrinholst/moment-holiday?type=peer)
+
 Holiday utilities for Moment. API is up for debate. I'm not totally in love with it so PRs are
 welcomed.
 
