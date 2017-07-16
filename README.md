@@ -1,12 +1,18 @@
-# moment-holiday
+# not-a-moment-holiday-plugin
 
-[![npm-version](https://img.shields.io/npm/v/moment-holiday.svg)](https://www.npmjs.com/package/moment-holiday)
-[![Build Status](https://travis-ci.org/darrinholst/moment-holiday.svg?branch=master)](https://travis-ci.org/darrinholst/moment-holiday)
-[![dependencies](https://david-dm.org/darrinholst/moment-holiday/status.svg)](https://david-dm.org/darrinholst/moment-holiday)
-[![dev dependencies](https://david-dm.org/darrinholst/moment-holiday/dev-status.svg)](https://david-dm.org/darrinholst/moment-holiday?type=dev)
-[![peer dependencies](https://david-dm.org/darrinholst/moment-holiday/peer-status.svg)](https://david-dm.org/darrinholst/moment-holiday?type=peer)
+[![npm-version](https://img.shields.io/npm/v/not-a-moment-holiday-plugin.svg)](https://www.npmjs.com/package/not-a-moment-holiday-plugin)
+[![Build Status](https://travis-ci.org/darrinholst/not-a-moment-holiday-plugin.svg?branch=master)](https://travis-ci.org/darrinholst/not-a-moment-holiday-plugin)
+[![dependencies](https://david-dm.org/darrinholst/not-a-moment-holiday-plugin/status.svg)](https://david-dm.org/darrinholst/not-a-moment-holiday-plugin)
+[![dev dependencies](https://david-dm.org/darrinholst/not-a-moment-holiday-plugin/dev-status.svg)](https://david-dm.org/darrinholst/not-a-moment-holiday-plugin?type=dev)
+[![peer dependencies](https://david-dm.org/darrinholst/not-a-moment-holiday-plugin/peer-status.svg)](https://david-dm.org/darrinholst/not-a-moment-holiday-plugin?type=peer)
 
-Holiday utilities for Moment.
+Holiday utilities for Moment. Not a plugin though. 😒
+
+### Installation
+
+#### node
+
+    npm install not-a-moment-holiday-plugin
 
 ### API
 
@@ -15,7 +21,7 @@ Holiday utilities for Moment.
 Returns the number of holidays observed by businesses between `startDate` and `endDate`.
 
 ``` js
-import {US} from 'moment-holiday';
+import {US} from 'not-a-moment-holiday-plugin';
 
 new US().countBusinessHolidaysBetween('2017-01-01', '2017-12-31'); // => 6
 ```

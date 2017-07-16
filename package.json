@@ -1,6 +1,6 @@
 {
-  "name": "moment-holiday",
-  "version": "0.0.1-beta.2",
+  "name": "not-a-moment-holiday-plugin",
+  "version": "0.0.1-beta.3",
   "description": "Methods to work with holidays in moment.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
