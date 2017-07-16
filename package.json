@@ -1,14 +1,15 @@
 {
   "name": "moment-holiday",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.2",
   "description": "Methods to work with holidays in moment.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
+    "lint": "tslint **/*.ts",
     "pretest": "npm run compile",
     "test": "mocha -c **/*.spec.js",
     "compile": "rimraf dist && tsc",
-    "prepublish": "npm run compile"
+    "prepublish": "npm run lint && npm run test"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,8 @@
     "moment",
     "momentjs",
     "moment.js",
-    "holiday"
+    "holiday",
+    "holidays"
   ],
   "author": "Darrin Holst <darrinholst@gmail.com>",
   "license": "MIT",
@@ -32,8 +34,10 @@
     "chai": "^4.0.2",
     "mocha": "^3.4.2",
     "moment": "^2.18.1",
+    "prettier": "^1.5.3",
     "release-it": "^2.8.0",
     "rimraf": "^2.6.1",
+    "tslint": "^5.5.0",
     "typescript": "^2.4.1"
   },
   "peerDependencies": {

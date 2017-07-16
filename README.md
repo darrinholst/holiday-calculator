@@ -6,26 +6,24 @@
 [![dev dependencies](https://david-dm.org/darrinholst/moment-holiday/dev-status.svg)](https://david-dm.org/darrinholst/moment-holiday?type=dev)
 [![peer dependencies](https://david-dm.org/darrinholst/moment-holiday/peer-status.svg)](https://david-dm.org/darrinholst/moment-holiday?type=peer)
 
-Holiday utilities for Moment. API is up for debate. I'm not totally in love with it so PRs are
-welcomed.
+Holiday utilities for Moment.
 
 ### API
 
-##### `holidays(holidaySet, startDate, endDate)`
+##### `countBusinessHolidaysBetween(startDate: Moment | string, endDate: Moment | string)`
 
-Counts the number of holidays between `startDate` and `endDate` as defined by the rules of
-`holidaySet`
+Returns the number of holidays observed by businesses between `startDate` and `endDate`.
 
 ``` js
-let {HolidaySet, holidays} = require('moment-holiday');
+import {US} from 'moment-holiday';
 
-holidays(HolidaySet.UsMinimal, '2017-01-01', '2017-12-31'); // => 6
+new US().countBusinessHolidaysBetween('2017-01-01', '2017-12-31'); // => 6
 ```
 
-### Holiday Sets
+### Holiday Rules
 
-All the rules for determining holidays is encapsulated in a `HolidaySet`. The only one currently
-implemented is `UsMinimal` which recognizes:
+All the rules for determining holidays is encapsulated in a `Holidays` object. `US` is currently the
+only one that's builtin. It recognizes:
 
 1. New Years Day
 1. Memorial Day

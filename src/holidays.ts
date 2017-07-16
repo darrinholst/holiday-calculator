@@ -1,16 +1,31 @@
 import * as moment from 'moment';
-import {UsMinimal} from './sets/us-minimal';
 
-export enum HolidaySet {
-  UsMinimal = 'US_MINIMAL'
-};
+export abstract class Holidays {
+  abstract countBusinessHolidaysBetween(
+    fromDate: moment.Moment | string,
+    toDate: moment.Moment | string
+  ): number;
 
-let sets = {
-  [HolidaySet.UsMinimal]: new UsMinimal()
-}
+  protected observedHoliday(date: string) {
+    let momentized = moment(date);
+    if (momentized.day() === 0) return momentized.add(1, 'day');
+    if (momentized.day() === 6) return momentized.subtract(1, 'day');
+    return momentized;
+  }
 
-export function holidays(whichOnes: HolidaySet, startDate: moment.Moment | string, endDate: moment.Moment | string) {
-  let holidaySet = sets[whichOnes];
-  if (!holidaySet) throw new Error(`No holiday config found for ${whichOnes}`);
-  return holidaySet.count(moment(startDate), moment(endDate));
+  protected third(year: number, month: string, day: string) {
+    return this.first(year, month, 'Thursday').add(3, 'weeks');
+  }
+
+  protected last(year: number, month: string, day: string) {
+    return moment(`${year}-${month}-01`).endOf('month').startOf('isoWeek');
+  }
+
+  protected first(year: number, month: string, day: string) {
+    let theFirstDayOfTheMonth = moment(`${year}-${month}-01`)
+      .startOf('month')
+      .day(day);
+    if (theFirstDayOfTheMonth.date() > 7) theFirstDayOfTheMonth.add(7, 'days');
+    return theFirstDayOfTheMonth;
+  }
 }
