@@ -1,7 +1,7 @@
 {
-  "name": "not-a-moment-holiday-plugin",
-  "version": "0.0.1-beta.3",
-  "description": "Methods to work with holidays in moment.",
+  "name": "holiday-calculator",
+  "version": "0.0.1-beta.4",
+  "description": "Calculates number of holidays between 2 dates.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
@@ -14,6 +14,11 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/darrinholst/moment-holiday.git"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "singleQuote": true,
+    "bracketSpacing": false
   },
   "keywords": [
     "moment",
@@ -28,19 +33,18 @@
   "bugs": {
     "url": "https://github.com/darrinholst/moment-holiday/issues"
   },
-  "devDependencies": {
-    "@types/chai": "^4.0.1",
-    "@types/mocha": "^2.2.41",
-    "chai": "^4.0.2",
-    "mocha": "^3.4.2",
-    "moment": "^2.18.1",
-    "prettier": "^1.5.3",
-    "release-it": "^2.8.0",
-    "rimraf": "^2.6.1",
-    "tslint": "^5.5.0",
-    "typescript": "^2.4.1"
+  "dependencies": {
+    "moment": "^2.0.0"
   },
-  "peerDependencies": {
-    "moment": "^2.18.1"
+  "devDependencies": {
+    "@types/chai": "^4.0.5",
+    "@types/mocha": "^2.2.44",
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
+    "prettier": "^1.8.2",
+    "release-it": "^2.9.0",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2"
   }
 }

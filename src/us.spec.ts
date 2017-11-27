@@ -11,7 +11,7 @@ describe('US Holidays', () => {
     it('should count all the holidays for the year', () => {
       expect(
         us.countBusinessHolidaysBetween('2017-01-01', '2017-12-31')
-      ).to.eql(6);
+      ).to.eql(9);
     });
 
     it('should count new years', function() {
@@ -83,6 +83,24 @@ describe('US Holidays', () => {
     it('should count the friday before christmas when it is on a saturday', function() {
       expect(
         us.countBusinessHolidaysBetween('2022-12-26', '2022-12-30')
+      ).to.eql(1);
+    });
+
+    it('should count veterans day', function() {
+      expect(
+        us.countBusinessHolidaysBetween('2017-11-09', '2017-11-10')
+      ).to.eql(1);
+    });
+
+    it('should count mlk day', function() {
+      expect(
+        us.countBusinessHolidaysBetween('2017-01-16', '2017-01-18')
+      ).to.eql(1);
+    });
+
+    it('should count presidents day', function() {
+      expect(
+        us.countBusinessHolidaysBetween('2017-02-20', '2017-02-20')
       ).to.eql(1);
     });
   });

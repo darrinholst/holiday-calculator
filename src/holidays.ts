@@ -14,11 +14,17 @@ export abstract class Holidays {
   }
 
   protected third(year: number, month: string, day: string) {
-    return this.first(year, month, 'Thursday').add(3, 'weeks');
+    return this.first(year, month, day).add(2, 'weeks');
+  }
+
+  protected fourth(year: number, month: string, day: string) {
+    return this.first(year, month, day).add(3, 'weeks');
   }
 
   protected last(year: number, month: string, day: string) {
-    return moment(`${year}-${month}-01`).endOf('month').startOf('isoWeek');
+    return moment(`${year}-${month}-01`)
+      .endOf('month')
+      .startOf('isoWeek');
   }
 
   protected first(year: number, month: string, day: string) {
